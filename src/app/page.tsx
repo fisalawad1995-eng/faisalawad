@@ -2,8 +2,10 @@
 
 import { SmokeBackground } from "@/components/ui/spooky-smoke-animation";
 import { GlowCard } from "@/components/ui/spotlight-card";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Mail, FileText, MessageCircle } from "lucide-react";
+import { useState } from "react";
+import { GlowingButton } from "@/components/ui/glowing-button";
 
 const LinkedinIcon = ({ size = 24, className = "", strokeWidth = 1.5 }: { size?: number, className?: string, strokeWidth?: number }) => (
   <svg 
@@ -25,6 +27,8 @@ const LinkedinIcon = ({ size = 24, className = "", strokeWidth = 1.5 }: { size?:
 );
 
 export default function Home() {
+  const [showAbout, setShowAbout] = useState(false);
+
   return (
     <main className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-x-hidden bg-slate-950 font-sans">
       {/* Background Animation */}
@@ -44,12 +48,35 @@ export default function Home() {
           }}
           className="text-center"
         >
-          <h1 className="bg-gradient-to-br from-white to-slate-400 py-2 bg-clip-text text-transparent font-black text-6xl md:text-8xl tracking-tighter uppercase drop-shadow-sm">
+          <h1 className="font-serif bg-gradient-to-br from-white to-slate-400 py-2 bg-clip-text text-transparent font-medium text-6xl md:text-8xl tracking-normal uppercase drop-shadow-sm">
             FAISAL AWAD ISAM
           </h1>
-          <p className="mt-4 font-medium text-slate-300 text-xl md:text-2xl tracking-wide">
+          <p className="mt-4 font-sans font-semibold text-slate-300 text-xl md:text-2xl tracking-[0.2em] uppercase">
             Computer Technology Engineer
           </p>
+
+          <div className="mt-10 flex justify-center w-full">
+            <GlowingButton glowColor="#06b6d4" onClick={() => setShowAbout(!showAbout)}>
+              {showAbout ? "Close About Me" : "About Me"}
+            </GlowingButton>
+          </div>
+
+          <AnimatePresence>
+            {showAbout && (
+              <motion.div
+                initial={{ opacity: 0, height: 0, y: -10 }}
+                animate={{ opacity: 1, height: "auto", y: 0 }}
+                exit={{ opacity: 0, height: 0, y: -10 }}
+                transition={{ duration: 0.3 }}
+                className="mt-8 max-w-3xl mx-auto text-center bg-slate-900/60 backdrop-blur-md p-6 md:p-8 rounded-2xl border border-white/5 shadow-2xl overflow-hidden"
+              >
+                <h3 className="text-xl md:text-2xl font-serif text-white mb-4 tracking-wide text-center">PROFESSIONAL SUMMARY</h3>
+                <p className="text-slate-300 leading-relaxed font-light text-sm md:text-base text-center">
+                  Computer Technology Engineer with parallel, equally deep expertise in telecommunications network engineering and ERP / full-stack software development. engineered and supported FTTH network infrastructure using industry tools such as Cisco Systems, QGIS, Nokia AMS, and Huawei iMaster NCE, while also architecting end-to-end ERP systems with Python, JavaScript, and Next.js. Brings an infrastructure-level understanding of telecom networks directly into enterprise software design — informing more resilient, scalable system architecture. Equally comfortable diagnosing network-level technical issues and leading full ERP implementations, including client onboarding, training, and digital transformation consulting, from concept through deployment.
+                </p>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </motion.div>
 
         {/* Contact Cards Section */}
