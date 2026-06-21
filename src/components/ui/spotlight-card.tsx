@@ -25,9 +25,9 @@ const sizeMap = {
   lg: 'w-80 h-96'
 };
 
-const GlowCard: React.FC<GlowCardProps> = ({ 
-  children, 
-  className = '', 
+const GlowCard: React.FC<GlowCardProps> = ({
+  children,
+  className = '',
   glowColor = 'blue',
   size = 'md',
   width,
@@ -66,14 +66,14 @@ const GlowCard: React.FC<GlowCardProps> = ({
     const baseStyles: any = {
       '--base': base,
       '--spread': spread,
-      '--radius': '14',
-      '--border': '3',
+      '--radius': '0',
+      '--border': '4',
       '--backdrop': 'hsl(0 0% 60% / 0.12)',
       '--backup-border': 'var(--backdrop)',
-      '--size': '200',
+      '--size': '300',
       '--outer': '1',
       '--border-size': 'calc(var(--border, 2) * 1px)',
-      '--spotlight-size': 'calc(var(--size, 150) * 1px)',
+      '--spotlight-size': 'calc(var(--size, 300) * 1px)',
       '--hue': 'calc(var(--base) + (var(--xp, 0) * var(--spread, 0)))',
       backgroundImage: `radial-gradient(
         var(--spotlight-size) var(--spotlight-size) at
@@ -167,7 +167,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
         className={`
           ${getSizeClasses()}
           ${!customSize ? 'aspect-[3/4]' : ''}
-          rounded-2xl 
+          rounded-3xl 
           relative 
           grid 
           grid-rows-[1fr_auto] 
