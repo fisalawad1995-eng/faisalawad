@@ -94,7 +94,7 @@ export default function Home() {
           <a href="https://wa.me/9647749737772" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto outline-none">
             <GlowCard customSize={true} glowColor="green" className="cursor-pointer w-full md:w-64 h-64">
               <div className="flex flex-col items-center justify-center h-full w-full text-slate-200 hover:text-white transition-colors">
-                <MessageCircle size={56} className="mb-4 text-green-400" strokeWidth={1.5} />
+                <MessageCircle size={56} className="mb-4 text-emerald-400 drop-shadow-md" strokeWidth={1.5} />
                 <h2 className="text-xl font-medium tracking-wide text-center">WhatsApp</h2>
                 <p className="text-slate-400/80 font-light mt-2 text-center text-sm">Chat with me directly</p>
               </div>
@@ -105,7 +105,7 @@ export default function Home() {
           <a href="/Faisal_Awad_Resume.docx" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto outline-none">
             <GlowCard customSize={true} glowColor="purple" className="cursor-pointer w-full md:w-64 h-64">
               <div className="flex flex-col items-center justify-center h-full w-full text-slate-200 hover:text-white transition-colors">
-                <FileText size={56} className="mb-4 text-purple-400" strokeWidth={1.5} />
+                <FileText size={56} className="mb-4 text-violet-400 drop-shadow-md" strokeWidth={1.5} />
                 <h2 className="text-xl font-medium tracking-wide text-center">My CV</h2>
                 <p className="text-slate-400/80 font-light mt-2 text-center text-sm">View my experience</p>
               </div>
@@ -116,7 +116,7 @@ export default function Home() {
           <a href="mailto:fisal.awad.1995@gmail.com" className="w-full md:w-auto outline-none">
             <GlowCard customSize={true} glowColor="blue" className="cursor-pointer w-full md:w-64 h-64">
               <div className="flex flex-col items-center justify-center h-full w-full text-slate-200 hover:text-white transition-colors">
-                <Mail size={56} className="mb-4 text-blue-400" strokeWidth={1.5} />
+                <Mail size={56} className="mb-4 text-blue-400 drop-shadow-md" strokeWidth={1.5} />
                 <h2 className="text-xl font-medium tracking-wide text-center">Email</h2>
                 <p className="text-slate-400/80 font-light mt-2 text-center text-sm">Send me a message</p>
               </div>
@@ -127,7 +127,7 @@ export default function Home() {
           <a href="https://www.linkedin.com/in/faisal-awad-4b9a4b1b1" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto outline-none">
             <GlowCard customSize={true} glowColor="blue" className="cursor-pointer w-full md:w-64 h-64">
               <div className="flex flex-col items-center justify-center h-full w-full text-slate-200 hover:text-white transition-colors">
-                <LinkedinIcon size={56} className="mb-4 text-blue-400" strokeWidth={1.5} />
+                <LinkedinIcon size={56} className="mb-4 text-sky-400 drop-shadow-md" strokeWidth={1.5} />
                 <h2 className="text-xl font-medium tracking-wide text-center">LinkedIn</h2>
                 <p className="text-slate-400/80 font-light mt-2 text-center text-sm">Connect with me</p>
               </div>
