@@ -48,10 +48,10 @@ export default function Home() {
           }}
           className="text-center"
         >
-          <h1 className="font-serif bg-gradient-to-br from-white to-slate-400 py-2 bg-clip-text text-transparent font-medium text-6xl md:text-8xl tracking-normal uppercase drop-shadow-sm">
+          <h1 className="font-serif bg-gradient-to-br from-white to-slate-400 py-2 bg-clip-text text-transparent font-medium text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-normal uppercase drop-shadow-sm">
             FAISAL AWAD ISAM
           </h1>
-          <p className="mt-4 font-sans font-semibold text-slate-300 text-xl md:text-2xl tracking-[0.2em] uppercase">
+          <p className="mt-4 font-sans font-semibold text-slate-300 text-sm sm:text-base md:text-xl lg:text-2xl tracking-[0.1em] md:tracking-[0.2em] uppercase">
             Computer Technology Engineer
           </p>
 
@@ -88,11 +88,11 @@ export default function Home() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="mt-16 flex flex-col md:flex-row gap-8 items-center justify-center w-full max-w-5xl px-4"
+          className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 items-center justify-center w-full max-w-5xl px-4"
         >
           {/* WhatsApp Card */}
-          <a href="https://wa.me/9647749737772" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto outline-none">
-            <GlowCard customSize={true} glowColor="green" className="cursor-pointer w-full md:w-64 h-64">
+          <a href="https://wa.me/9647749737772" target="_blank" rel="noopener noreferrer" className="w-full outline-none">
+            <GlowCard customSize={true} glowColor="green" className="cursor-pointer w-full h-64">
               <div className="flex flex-col items-center justify-center h-full w-full text-slate-200 hover:text-white transition-colors">
                 <MessageCircle size={56} className="mb-4 text-emerald-400 drop-shadow-md" strokeWidth={1.5} />
                 <h2 className="text-xl font-medium tracking-wide text-center">WhatsApp</h2>
@@ -102,8 +102,8 @@ export default function Home() {
           </a>
 
           {/* CV Card */}
-          <a href="/Faisal_Awad_Resume.docx" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto outline-none">
-            <GlowCard customSize={true} glowColor="purple" className="cursor-pointer w-full md:w-64 h-64">
+          <a href="/Faisal_Awad_Resume.docx" target="_blank" rel="noopener noreferrer" className="w-full outline-none">
+            <GlowCard customSize={true} glowColor="purple" className="cursor-pointer w-full h-64">
               <div className="flex flex-col items-center justify-center h-full w-full text-slate-200 hover:text-white transition-colors">
                 <FileText size={56} className="mb-4 text-violet-400 drop-shadow-md" strokeWidth={1.5} />
                 <h2 className="text-xl font-medium tracking-wide text-center">My CV</h2>
@@ -113,8 +113,8 @@ export default function Home() {
           </a>
 
           {/* Email Card */}
-          <a href="mailto:fisal.awad.1995@gmail.com" className="w-full md:w-auto outline-none">
-            <GlowCard customSize={true} glowColor="blue" className="cursor-pointer w-full md:w-64 h-64">
+          <a href="mailto:fisal.awad.1995@gmail.com" className="w-full outline-none">
+            <GlowCard customSize={true} glowColor="blue" className="cursor-pointer w-full h-64">
               <div className="flex flex-col items-center justify-center h-full w-full text-slate-200 hover:text-white transition-colors">
                 <Mail size={56} className="mb-4 text-blue-400 drop-shadow-md" strokeWidth={1.5} />
                 <h2 className="text-xl font-medium tracking-wide text-center">Email</h2>
@@ -124,8 +124,8 @@ export default function Home() {
           </a>
 
           {/* LinkedIn Card */}
-          <a href="https://www.linkedin.com/in/faisal-awad-4b9a4b1b1" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto outline-none">
-            <GlowCard customSize={true} glowColor="blue" className="cursor-pointer w-full md:w-64 h-64">
+          <a href="https://www.linkedin.com/in/faisal-awad-4b9a4b1b1" target="_blank" rel="noopener noreferrer" className="w-full outline-none">
+            <GlowCard customSize={true} glowColor="blue" className="cursor-pointer w-full h-64">
               <div className="flex flex-col items-center justify-center h-full w-full text-slate-200 hover:text-white transition-colors">
                 <LinkedinIcon size={56} className="mb-4 text-sky-400 drop-shadow-md" strokeWidth={1.5} />
                 <h2 className="text-xl font-medium tracking-wide text-center">LinkedIn</h2>
